@@ -1,0 +1,10 @@
+<div class="nae-tabs-container">
+    <ul class="nae-tabs-menu">
+        <li
+                *ngFor=" let eachTab of tabsGroup "
+                [ngClass]="{'active': eachTab.value == currentActiveTab}"
+                (click)="switchTabs(eachTab.value)"
+                class="nae-tabs-list">{{eachTab.display}}
+        </li>
+    </ul>
+</div>

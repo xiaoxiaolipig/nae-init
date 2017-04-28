@@ -1,0 +1,13 @@
+<div style="border:1px solid white; padding:30px;">
+	<h2>Route Sample</h2>
+	<h3>
+		<a [routerLink]="['route-level-1']" routerLinkActive="active">Route Level 1</a> | 
+		<a [routerLink]="['route-level-1/empty']" routerLinkActive="active">Route Level 1 Empty</a> | 
+		<a [routerLink]="['route-level-1-component']" routerLinkActive="active">Route Level 1 Component</a> |
+		<a [routerLink]="['route-level-1-none-child']" routerLinkActive="active">Route Level 1 None Child</a> |
+		<a [routerLink]="['route-level-1-with-params/123']" routerLinkActive="active">Route Level 1 With Params</a>
+	</h3>
+	<hr style="border: 1px solid;">
+	<router-outlet></router-outlet>
+
+</div>

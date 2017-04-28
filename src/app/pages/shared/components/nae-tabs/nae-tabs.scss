@@ -1,0 +1,31 @@
+@import '../../../../theme/sass/conf/conf';
+
+.nae-tabs-container {
+  margin-top: 10px;
+  border-bottom: 1px solid $border;
+}
+
+.nae-tabs-menu {
+  list-style-type:none;
+  padding: 0;
+  margin: 0;
+  .active {
+    color: $primary;
+    border-bottom: 3px solid $primary;
+  }
+}
+.nae-tabs-list {
+  display: inline-block;
+  vertical-align: top;
+  height: 43px;
+  line-height: 42px;
+  font-size: 16px;
+  padding: 0 12px;
+  cursor: pointer;
+  margin: 0 24px;
+  white-space: nowrap;
+  font-weight: bold;
+  &:hover {
+    cursor: pointer;
+  }
+}
