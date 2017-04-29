@@ -29,7 +29,11 @@ export const routes: Routes = [
             {
                 path: 'route-sample',
                 loadChildren: './route-sample/route-sample.module#RouteSampleModule'
-            }
+            },
+            {
+                path: 'components-sample',
+                loadChildren: './components-sample/components-sample.module#ComponentsSampleModule'
+            },
         ]
     }
 ];
