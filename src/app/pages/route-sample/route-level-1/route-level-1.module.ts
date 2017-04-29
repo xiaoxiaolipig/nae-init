@@ -15,5 +15,5 @@ import {RouteLevelOneEmptyComponent} from './route-level-1-empty.component';
         RouteLevelOneEmptyComponent
     ]
 })
-export default class RouteLevelOneModule {
+export class RouteLevelOneModule {
 }
