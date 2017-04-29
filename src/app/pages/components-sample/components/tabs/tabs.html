@@ -1,0 +1,15 @@
+TABS
+
+<hr>
+<h3> Current Tab : {{currentActiveTab}}</h3>
+<nae-tabs
+        [tabsGroup]='tabsGroup'
+        [defaultActiveItem]="'information'"
+        (activeItem)="updateActiveItem($event)"
+></nae-tabs>
+
+<ng-container *ngFor="let eachTabObj of tabsGroup">
+    <div *ngIf="eachTabObj.value === currentActiveTab">
+       <h3> {{eachTabObj.display}} 's Content </h3>
+    </div>
+</ng-container>

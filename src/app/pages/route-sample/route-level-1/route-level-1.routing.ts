@@ -14,7 +14,7 @@ export const routes: Routes = [
 			},
 			{
 			path: 'route-level-2',
-			loadChildren: () => System.import('./route-level-2/route-level-2.module')
+            loadChildren: './route-level-2/route-level-2.module#RouteLevelTwoModule'
 			}
         ]
     },

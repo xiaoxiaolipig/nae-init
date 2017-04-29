@@ -10,11 +10,11 @@ import {AuthenticationService} from '../services/authentication.service';
 export const routes: Routes = [
     {
         path: 'login',
-        loadChildren: 'app/pages/login/login.module#LoginModule'
+        loadChildren: './login/login.module#LoginModule'
     },
     {
         path: 'register',
-        loadChildren: 'app/pages/register/register.module#RegisterModule'
+        loadChildren: './register/register.module#RegisterModule'
     },
     {
         path: 'pages',
@@ -24,14 +24,18 @@ export const routes: Routes = [
             {path: '', redirectTo: 'dashboard', pathMatch: 'full'},
             {
                 path: 'dashboard',
-                loadChildren: 'app/pages/dashboard/dashboard.module#DashboardModule'
+                loadChildren: './dashboard/dashboard.module#DashboardModule'
             },
             {
-                path: 'route',
-                loadChildren: 'app/pages/route-sample/route-sample.module#RouteSampleModule'
-            }
+                path: 'route-sample',
+                loadChildren: './route-sample/route-sample.module#RouteSampleModule'
+            },
+            {
+                path: 'components-sample',
+                loadChildren: './components-sample/components-sample.module#ComponentsSampleModule'
+            },
         ]
     }
 ];
-
+//
 export const routing: ModuleWithProviders = RouterModule.forChild(routes);

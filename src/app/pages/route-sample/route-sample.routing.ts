@@ -9,7 +9,7 @@ export const routes: Routes = [
     path: '',
     component: RouteSampleComponent,
     children: [
-    
+
       {
         path: '',
         redirectTo: 'route-level-1',
@@ -17,20 +17,20 @@ export const routes: Routes = [
       },
       {
         path: 'route-level-1',
-        loadChildren: () => System.import('./route-level-1/route-level-1.module')
+        loadChildren: './route-level-1/route-level-1.module#RouteLevelOneModule'
       },
       {
         path:'route-level-1-component',
         component: RouteLevelOneComponentComponent
       },
-    
+
       {
         path: 'route-level-1-none-child',
-        loadChildren: () => System.import('./route-level-1-none-child/route-level-1-none-child.module')
+        loadChildren: './route-level-1-none-child/route-level-1-none-child.module#RouteLevelOneModule'
       },
       {
         path: 'route-level-1-with-params/:params',
-        loadChildren: () => System.import('./route-level-1-with-params/route-level-1-with-params.module')
+        loadChildren: './route-level-1-with-params/route-level-1-with-params.module#routeLevelOneWithParamsModule'
       }
     ]
   }

@@ -14,5 +14,5 @@ import {routeLevelOneNoneChildComponent} from './route-level-1-none-child.compon
         routeLevelOneNoneChildComponent
     ]
 })
-export default class RouteLevelOneModule {
+export class RouteLevelOneModule {
 }

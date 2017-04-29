@@ -14,5 +14,5 @@ import {routeLevelTwoComponent} from './route-level-2.component';
         routeLevelTwoComponent
     ]
 })
-export default class RouteLevelTwoModule {
+export class RouteLevelTwoModule {
 }

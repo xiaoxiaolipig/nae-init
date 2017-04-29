@@ -14,5 +14,5 @@ import {routeLevelOneWithParamsComponent} from './route-level-1-with-params.comp
         routeLevelOneWithParamsComponent
     ]
 })
-export default class routeLevelOneWithParamsModule {
+export class routeLevelOneWithParamsModule {
 }
