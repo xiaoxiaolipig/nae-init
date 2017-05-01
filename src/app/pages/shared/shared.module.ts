@@ -5,6 +5,9 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 // components
 import {TabsComponent} from './components/nae-tabs/nae-tabs.component';
 
+// pipes
+import {TRANSLATION_PROVIDERS, TranslatePipe, TranslateService }   from './pipes/translate';
+
 
 @NgModule({
     imports: [
@@ -14,9 +17,13 @@ import {TabsComponent} from './components/nae-tabs/nae-tabs.component';
     ],
     declarations: [
         TabsComponent,
+        TranslatePipe,
     ],
+    providers: [ TRANSLATION_PROVIDERS, TranslateService ],
+
     exports: [
         TabsComponent,
+        TranslatePipe,
     ]
 })
 
