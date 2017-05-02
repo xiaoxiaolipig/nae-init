@@ -1,0 +1,15 @@
+<div class="process-steps">
+    <div class="process-steps-row">
+        <div
+                *ngFor=" let eachStep of stepsArray; let i = index "
+                [ngClass]="{'first-step': i =='0', 'last-step': i == (stepsArray.length-1+'')}"
+                [ngStyle]="{'width': '100'/stepsArray.length + '%'}"
+                class="process-steps-step">
+            <button
+                    [ngClass]="{'btn-default': !eachStep.active, 'btn-primary': eachStep.active}"
+                    type="button" class="btn btn-circle process-steps_btn-no-animation">{{eachStep.title}}</button>
+            <p class="process-steps_content">{{eachStep.content}}</p>
+        </div>
+
+    </div>
+</div>

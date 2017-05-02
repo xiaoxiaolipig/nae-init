@@ -1,0 +1,70 @@
+@import '../../../../theme/sass/conf/conf';
+
+.process-steps-step p {
+  margin-top: 10px;
+}
+
+.process-steps-row {
+  display: table-row;
+
+}
+
+.process-steps {
+  margin:15px;
+  padding:15px;
+  display: table;
+  width: 100%;
+  position: relative;
+}
+
+
+
+.process-steps-step {
+  display: table-cell;
+  text-align: center;
+  position: relative;
+  &:before {
+    top: 29px;
+    left: calc(50% + 30px);
+    bottom: 0;
+    position: absolute;
+    content: " ";
+    width: calc(100% - 60px);
+    height: 1px;
+    background-color: #ccc;
+    z-index: 1;
+  }
+}
+
+.process-steps-step.first-step{
+  &:before {
+    left: calc(50% + 30px);
+  }
+}
+.process-steps-step.last-step{
+  &:before {
+    width: 0;
+  }
+}
+
+
+
+.btn-circle {
+  width: 60px;
+  height: 60px;
+  text-align: center;
+  padding: 6px 0;
+  font-size: 30px;
+  line-height: 1.428571429;
+  border-radius: 50%;
+}
+.process-steps_content {
+  font-size:20px;
+}
+
+.btn.process-steps_btn-no-animation {
+  &:hover {
+    transform: unset;
+    cursor:default;
+  }
+}

@@ -21,6 +21,11 @@ export const routes: Routes = [
                 path: 'tabs',
                 loadChildren: './components/tabs/tabs.module#TabsModule'
             },
+            {
+                path:'steps',
+
+                loadChildren:'./components/steps/steps.module#StepsModule'
+            }
         ]
     },
 ];

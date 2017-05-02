@@ -4,6 +4,7 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // components
 import {TabsComponent} from './components/nae-tabs/nae-tabs.component';
+import {ProcessStepsComponent} from "./components/component-process-steps/component-process-steps";
 
 
 @NgModule({
@@ -14,9 +15,11 @@ import {TabsComponent} from './components/nae-tabs/nae-tabs.component';
     ],
     declarations: [
         TabsComponent,
+        ProcessStepsComponent
     ],
     exports: [
         TabsComponent,
+        ProcessStepsComponent
     ]
 })
 

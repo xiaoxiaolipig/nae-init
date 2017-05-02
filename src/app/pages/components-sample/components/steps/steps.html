@@ -1,0 +1,36 @@
+steps
+<hr>
+<process-steps [stepsArray]="stepsArray"></process-steps>
+
+<ng-container *ngIf="currentPage == '1'">
+    <div>
+        <h3 class="text-center">1st step</h3>
+        <div class="col-md-12 information-unit text-center">
+            <button (click)="switchPage('2')" class="btn btn-link" style="font-size: medium">Next</button>
+        </div>
+
+    </div>
+
+</ng-container>
+<ng-container *ngIf="currentPage == '2'">
+    <div>
+        <h3 class="text-center">2nd step</h3>
+        <div class="col-md-12 information-unit text-center">
+            <button (click)="switchPage('1')" class="btn btn-link" style="font-size: medium">Back</button>
+            <button (click)="switchPage('3')" class="btn btn-link" style="font-size: medium">Next</button>
+        </div>
+
+    </div>
+
+</ng-container>
+<ng-container *ngIf="currentPage == '3'">
+    <div>
+        <h3 class="text-center">3rd step</h3>
+        <div class="col-md-12 information-unit text-center">
+            <button (click)="switchPage('2')" class="btn btn-link" style="font-size: medium">Back</button>
+            <button class="btn btn-link" style="font-size: medium">Submit</button>
+        </div>
+
+    </div>
+
+</ng-container>
