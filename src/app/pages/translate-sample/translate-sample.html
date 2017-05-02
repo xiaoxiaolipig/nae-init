@@ -1,24 +1,32 @@
  <h3>
-     translate-sample
+     {{'language-preference' | translate}}
  </h3>
 
  <br>
 
  <div class="container">
-     <h4>Translate: Hello World</h4>
-     <div class="btn-group">
-         <button *ngFor="let lang of supportedLanguages"
-                 (click)="selectLang(lang.value)"
-                 class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
-             {{ lang.display }}
-         </button>
-     </div>
-     <div style="margin-top: 20px">
+     <h4>
+         {{ 'select-language' | translate }}
+
+     </h4>
+     <hr>
+     <div>
+
+         <div class="btn-group">
+             <button *ngFor="let lang of supportedLanguages"
+                     (click)="selectLang(lang.value)"
+                     class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
+                 {{ lang.display }}
+             </button>
+         </div>
+         <br><br>
          <p>
-             Translate With Pipe: <strong>{{ 'hello world' | translate }}</strong>
+             {{ 'current-language' | translate }} : {{ _translate.currentLang | translate}}
+
          </p>
-         <p>
-             Translate with Service: <strong>{{ translatedText }}</strong>
+
+         <p *ngIf="reloadHint">
+             {{ 'reload-browser' | translate}}
          </p>
      </div>
  </div>
