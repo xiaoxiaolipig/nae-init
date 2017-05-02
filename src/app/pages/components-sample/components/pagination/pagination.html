@@ -1,0 +1,9 @@
+Pagination
+<hr>
+<h3>Current page:{{ query['currentPageNum']}}</h3>
+<h3>Page size:{{ query['currentPageSize']}}</h3>
+<h3>Total Pages:{{query['totalPages']}}</h3>
+<pagination [pagingObj]="pagingObj" (activePaging)="updatePaging($event)">
+</pagination>
+
+
