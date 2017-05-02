@@ -3,6 +3,12 @@
 export const LANG_ZH_NAME = 'zh';
 
 export const LANG_ZH_TRANS = {
+    'zh':'中文',
+    'en':'English',
+    'language-preference':'语言偏好',
+    'select-language':'请选择 您的语言偏好',
+    'current-language':'您的语言偏好是 ',
+    'reload-browser':'请刷新浏览器激活设置',
     'hello world': '你好，世界',
     'dashboard': '报表',
     'manage-device': '设备管理',

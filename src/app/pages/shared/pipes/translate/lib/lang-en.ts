@@ -3,6 +3,12 @@
 export const LANG_EN_NAME = 'en';
 
 export const LANG_EN_TRANS = {
+    'zh':'中文',
+    'en':'English',
+    'language-preference':'Language Preference',
+    'select-language':'Please Select Your Preference Language',
+    'current-language':'Your Preference Language is ',
+    'reload-browser':'Please reload your browser to active setting',
     'hello world': 'hello world',
     'dashboard': 'Dashboard',
     'manage-device': 'Device',

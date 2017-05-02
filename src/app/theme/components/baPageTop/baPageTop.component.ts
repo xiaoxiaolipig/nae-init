@@ -14,7 +14,6 @@ export class BaPageTop {
 
   public isScrolled:boolean = false;
   public isMenuCollapsed:boolean = false;
-  public profileDropdownLabelGroup:any = [];
 
   constructor(private _state:GlobalState,private _translate: TranslateService) {
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
@@ -32,15 +31,11 @@ export class BaPageTop {
     this.isScrolled = isScrolled;
   }
 
-  public translateDropdownMenu () {
-    let profileGroup = ['profile','settings','sign-out'];
-    profileGroup.forEach(profile=>{
-      this.profileDropdownLabelGroup.push(this._translate.instant(profile));
-    });
-
+  public translateDropdownMenu (label) {
+    return this._translate.instant(label);
   }
 
   ngOnInit() {
-    this.translateDropdownMenu();
+
   }
 }

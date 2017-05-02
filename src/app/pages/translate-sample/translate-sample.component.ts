@@ -10,6 +10,7 @@ export class TranslateSampleComponent {
 
     public translatedText: string;
     public supportedLanguages: any[];
+    public reloadHint:boolean = false;
 
     constructor(private _translate: TranslateService) {
     }
@@ -20,9 +21,6 @@ export class TranslateSampleComponent {
             { display: 'English', value: 'en' },
             { display: '中文', value: 'zh' },
         ];
-
-        //this.selectLang('en');
-
     }
 
     isCurrentLang(lang: string) {
@@ -33,6 +31,7 @@ export class TranslateSampleComponent {
         // set default;
         this._translate.use(lang);
         this.refreshText();
+        this.reloadHint = true;
     }
 
     refreshText() {
