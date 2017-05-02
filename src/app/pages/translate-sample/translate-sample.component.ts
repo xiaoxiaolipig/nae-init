@@ -18,10 +18,10 @@ export class TranslateSampleComponent {
         // standing data
         this.supportedLanguages = [
             { display: 'English', value: 'en' },
-            { display: '华语', value: 'zh' },
+            { display: '中文', value: 'zh' },
         ];
 
-        this.selectLang('es');
+        //this.selectLang('en');
 
     }
 

@@ -6,17 +6,25 @@ import { TRANSLATIONS } from './translations'; // import our opaque token
 export class TranslateService {
     private _currentLang: string;
 
-    public get currentLang() {
-        return this._currentLang;
-    }
+
 
     // inject our translations
     constructor(@Inject(TRANSLATIONS) private _translations: any) {
     }
 
+    public get currentLang() {
+        // get current language
+        let preferLanguage = localStorage.getItem('lang');
+        if(preferLanguage === null){
+            localStorage.setItem('lang','en');
+            preferLanguage = 'en';
+        }
+        return preferLanguage;
+    }
+
     public use(lang: string): void {
         // set current language
-        this._currentLang = lang;
+        localStorage.setItem('lang',lang);
     }
 
     private translate(key: string): string {
