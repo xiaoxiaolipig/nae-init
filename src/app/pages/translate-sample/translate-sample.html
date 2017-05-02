@@ -1,0 +1,32 @@
+ <h3>
+     {{'language-preference' | translate}}
+ </h3>
+
+ <br>
+
+ <div class="container">
+     <h4>
+         {{ 'select-language' | translate }}
+
+     </h4>
+     <hr>
+     <div>
+
+         <div class="btn-group">
+             <button *ngFor="let lang of supportedLanguages"
+                     (click)="selectLang(lang.value)"
+                     class="btn btn-default" [class.btn-primary]="isCurrentLang(lang.value)">
+                 {{ lang.display }}
+             </button>
+         </div>
+         <br><br>
+         <p>
+             {{ 'current-language' | translate }} : {{ _translate.currentLang | translate}}
+
+         </p>
+
+         <p *ngIf="reloadHint">
+             {{ 'reload-browser' | translate}}
+         </p>
+     </div>
+ </div>
