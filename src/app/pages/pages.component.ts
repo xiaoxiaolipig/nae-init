@@ -3,6 +3,7 @@ import { Routes } from '@angular/router';
 
 import { BaMenuService } from '../theme';
 import { PAGES_MENU } from './pages.menu';
+import { TranslateService } from './shared/pipes/translate';
 
 @Component({
   selector: 'pages',
@@ -31,10 +32,40 @@ import { PAGES_MENU } from './pages.menu';
 })
 export class Pages {
 
-  constructor(private _menuService: BaMenuService,) {
+  constructor(private _menuService: BaMenuService,private _translate: TranslateService,) {
+  }
+
+  translateMenu (menu) {
+    this.translateLoop(menu);
+    return menu;
+  }
+
+  translateLoop (parent) {
+    let type = this.checkObjectType(parent);
+    if(type === 'array') {
+      parent.forEach(child=>{
+        this.translateLoop(child);
+      })
+    }
+    if(type === 'object' && parent.hasOwnProperty('data')) {
+      parent.data.menu.title = this._translate.instant(parent.data.menu.title);
+    }
+    if(type === 'object' && parent.hasOwnProperty('children')) {
+      parent.children.forEach(child=>{
+        this.translateLoop(child);
+      })
+    }
+  }
+
+  checkObjectType (obj) {
+    if(Object.prototype.toString.call(obj) === '[object Array]') return 'array';
+    if(Object.prototype.toString.call(obj) === '[object Object]') return 'object';
+    if(Object.prototype.toString.call(obj) === '[object Undefined]') return 'undefined';
+    return '';
   }
 
   ngOnInit() {
-    this._menuService.updateMenuByRoutes(<Routes>PAGES_MENU);
+    let menu = this.translateMenu(PAGES_MENU);
+    this._menuService.updateMenuByRoutes(<Routes>menu);
   }
 }

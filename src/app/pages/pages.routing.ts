@@ -34,6 +34,10 @@ export const routes: Routes = [
                 path: 'components-sample',
                 loadChildren: './components-sample/components-sample.module#ComponentsSampleModule'
             },
+            {
+                path: 'translate-sample',
+                loadChildren: './translate-sample/translate-sample.module#TranslateSampleModule'
+            },
         ]
     }
 ];

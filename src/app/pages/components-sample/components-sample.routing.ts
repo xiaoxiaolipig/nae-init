@@ -25,6 +25,10 @@ export const routes: Routes = [
                 path:'steps',
 
                 loadChildren:'./components/steps/steps.module#StepsModule'
+            },
+            {
+                path: 'pagination',
+                loadChildren: './components/pagination/pagination.module#PaginationModule'
             }
         ]
     },
