@@ -36,9 +36,7 @@ export class Pages {
   }
 
   translateMenu (menu) {
-    console.log(PAGES_MENU,this._translate.instant('hello world'));
     this.translateLoop(menu);
-    console.log(menu);
     return menu;
   }
 

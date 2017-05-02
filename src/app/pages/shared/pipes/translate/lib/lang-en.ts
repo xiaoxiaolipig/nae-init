@@ -4,7 +4,6 @@ export const LANG_EN_NAME = 'en';
 
 export const LANG_EN_TRANS = {
     'hello world': 'hello world',
-    'profile': 'profile',
     'dashboard': 'Dashboard',
     'manage-device': 'Device',
     'device-explorer': 'Explorer',
@@ -28,4 +27,7 @@ export const LANG_EN_TRANS = {
     'request-access':'Request Access',
     'granting-access':'Granting Access',
     'help':'Help',
+    'profile': 'Profile',
+    'settings': 'Settings',
+    'sign-out': 'Sign Out',
 };

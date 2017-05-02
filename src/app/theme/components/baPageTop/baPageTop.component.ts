@@ -4,6 +4,8 @@ import {GlobalState} from '../../../global.state';
 
 import 'style-loader!./baPageTop.scss';
 
+import { TranslateService } from '../../../pages/shared/pipes/translate';
+
 @Component({
   selector: 'ba-page-top',
   templateUrl: './baPageTop.html',
@@ -12,8 +14,9 @@ export class BaPageTop {
 
   public isScrolled:boolean = false;
   public isMenuCollapsed:boolean = false;
+  public profileDropdownLabelGroup:any = [];
 
-  constructor(private _state:GlobalState) {
+  constructor(private _state:GlobalState,private _translate: TranslateService) {
     this._state.subscribe('menu.isCollapsed', (isCollapsed) => {
       this.isMenuCollapsed = isCollapsed;
     });
@@ -27,5 +30,17 @@ export class BaPageTop {
 
   public scrolledChanged(isScrolled) {
     this.isScrolled = isScrolled;
+  }
+
+  public translateDropdownMenu () {
+    let profileGroup = ['profile','settings','sign-out'];
+    profileGroup.forEach(profile=>{
+      this.profileDropdownLabelGroup.push(this._translate.instant(profile));
+    });
+
+  }
+
+  ngOnInit() {
+    this.translateDropdownMenu();
   }
 }

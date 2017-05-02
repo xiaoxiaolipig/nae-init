@@ -4,7 +4,6 @@ export const LANG_ZH_NAME = 'zh';
 
 export const LANG_ZH_TRANS = {
     'hello world': '你好，世界',
-    'profile': '个人资料',
     'dashboard': '报表',
     'manage-device': '设备管理',
     'device-explorer': '所有设备',
@@ -28,4 +27,7 @@ export const LANG_ZH_TRANS = {
     'request-access':'请求权限',
     'granting-access':'发放权限',
     'help':'帮助',
+    'profile': '个人资料',
+    'settings': '设置',
+    'sign-out': '注销',
 };
