@@ -1,9 +1,4 @@
-/**
- * Created by xiaoxiao on 5/1/17.
- */
-/**
- * Created by xiaoxiao on 5/1/17.
- */
+
 import { Component, OnInit , EventEmitter } from '@angular/core';
 import { Observable } from 'rxjs/Observable';
 

@@ -1,6 +1,4 @@
-/**
- * Created by xiaoxiao on 5/1/17.
- */
+
 import {Routes, RouterModule} from '@angular/router';
 import {PaginationComponent} from './pagintaion.component';
 

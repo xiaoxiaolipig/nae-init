@@ -1,6 +1,4 @@
-/**
- * Created by xiaoxiao on 5/1/17.
- */
+
 import {NgModule}      from '@angular/core';
 import {CommonModule}  from '@angular/common';
 import {routing}  from './pagination.routing';
