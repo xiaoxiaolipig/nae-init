@@ -21,6 +21,10 @@ export const routes: Routes = [
                 path: 'tabs',
                 loadChildren: './components/tabs/tabs.module#TabsModule'
             },
+            {
+                path: 'pagination',
+                loadChildren: './components/pagination/pagination.module#PaginationModule'
+            }
         ]
     },
 ];

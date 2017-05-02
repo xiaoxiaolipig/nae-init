@@ -1,10 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>$Title$</title>
-</head>
-<body>
-$END$
-</body>
-</html>
+<span class="page-group_page-size">Size:
+	<select #pagesizeSelection
+			[(ngModel)]="pagingObj.currentPageSize"
+			(change)="pagingChange('size',pagesizeSelection.value)">
+		<option *ngFor="let pageLabel of pagingObj.pageLabelsGroup" value="{{pageLabel}}">
+			{{pageLabel}}
+		</option>
+	</select>
+</span>
+<span class="page-group_page-preNnext"
+	  (click)="pagingChange('pre')"> << </span>
+<input type="text" class="page-group_page-size-input"
+	   value="{{(pagingObj.currentPageNum+1)/1}}"
+	   #inputCurrentPage
+	   (keyup.enter)="pagingChange('enter',inputCurrentPage.value)"
+> / {{pagingObj.totalPages}}
+<span class="page-group_page-preNnext"
+	  (click)="pagingChange('next')"> >> </span>
